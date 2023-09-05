@@ -45,17 +45,23 @@ body {
 
 section.grid-container {
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: 20vw 80vw;
   grid-template-rows: 10vh 70vh 20vh;
+  grid-template-areas: 
+    "sidebar header"  
+    "sidebar main"  
+    "sidebar footer"  
+  ;
 }
 
 .main-content {
   max-width: 120rem;
   margin: 0 auto;
+  height: 100%;
 }
 
 aside.aside {
-  display: none;
+  /* display: none; */
   position: fixed;
   left: 0;
   top: 0;
@@ -63,16 +69,14 @@ aside.aside {
   width: 20%;
   height: 100vh;
   z-index: 2;
+  grid-area: sidebar;
 }
 
 .main-heading {
   font-size: 2em;
   margin: 1rem auto;
   text-align: center;
-  border: 1rem solid;
-  padding: 1rem;
-  border-image-slice: 1;
-  border-image-source: var(--border-gradient);
+  border: .5rem solid #2b2b2b;
 }
 
 section.first-section {
