@@ -58,6 +58,8 @@ section.grid-container {
   max-width: 120rem;
   margin: 0 auto;
   height: 100%;
+  width: 100%;
+  grid-column: 1/-1;
 }
 
 aside.aside {
