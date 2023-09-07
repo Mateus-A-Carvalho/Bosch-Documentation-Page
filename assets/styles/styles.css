@@ -4,12 +4,13 @@
 :root {
   --body-font-size: 62.5%;
   --main-bg: rgba(207, 207, 207);
+  --main-black-color: rgba(43, 43, 43, 0.75);
   --aside-bg: linear-gradient(
     to right,
     rgba(2,29,82,1),
     rgb(8, 59, 160)
   );
-  --text-shadow: 5px 5px 20px rgba(43, 43, 43, 0.75)
+  --text-shadow: .5rem .5rem 2rem var(--main-black-color);
 
 
 /* 
@@ -51,7 +52,7 @@ section.grid-container {
   grid-template-columns: 15vw 85vw;
   grid-template-rows: repeat(3, auto);
   grid-template-areas: 
-    "sidebar header"  
+    "header header"  
     "sidebar main"  
     "sidebar footer"  
   ;
@@ -71,7 +72,7 @@ header.header {
 }
 
 aside.aside {
-  /* display: none; */
+  display: none;
   position: fixed;
   left: 0;
   top: 0;
@@ -80,7 +81,7 @@ aside.aside {
   height: 100vh;
   z-index: 2;
   grid-area: sidebar;
-  border-right:.5rem solid rgba(143, 143, 143, 1);
+  border-right: .5rem solid var(--main-black-color);
 }
 
 header.header {
