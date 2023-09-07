@@ -9,6 +9,7 @@
     rgba(2,29,82,1),
     rgb(8, 59, 160)
   );
+  --text-shadow: 5px 5px 20px rgba(43, 43, 43, 0.75)
 
 
 /* 
@@ -47,8 +48,8 @@ body {
 
 section.grid-container {
   display: grid;
-  grid-template-columns: 20vw 80vw;
-  grid-template-rows: 10vh 70vh 20vh;
+  grid-template-columns: 15vw 85vw;
+  grid-template-rows: repeat(3, auto);
   grid-template-areas: 
     "sidebar header"  
     "sidebar main"  
@@ -58,6 +59,7 @@ section.grid-container {
 
 header.header {
   grid-area: header;
+  width: 85vw;
 }
 
 .main-content {
@@ -74,19 +76,29 @@ aside.aside {
   left: 0;
   top: 0;
   background: var(--aside-bg);
-  width: 20%;
+  width: 15vw;
   height: 100vh;
   z-index: 2;
   grid-area: sidebar;
+  border-right:.5rem solid rgba(143, 143, 143, 1);
+}
+
+header.header {
+  margin: 1rem auto;
+  width: 100%;
+  color: rgba(6, 9, 120, 47);
+  font-style: italic;
 }
 
 header h1.main-heading {
   font-size: 2em;
   font-family: 'Lato', sans-serif;
+  font-style: italic;
   margin: 1rem auto;
   text-align: center;
+  text-shadow: var(--text-shadow);
 }
 
-section.first-section {
-  background-color: rgba(219, 219, 219, 1);
+header p.p__header {
+  text-align: center;
 }
