@@ -96,10 +96,21 @@ body {
   height: 1.5rem;
   width: 1.5rem;
   margin: 0 .2rem;
-  background: rgb(187, 187, 187, .8);
+  background: rgba(79, 79, 79, .8);
   border-radius: 50%;
   display: inline-block;
   transition: background-color var(--transition-time);
+  user-select: none;
+}
+
+.active .dot:hover {
+  background-color: rgb(113, 113, 113, 1);
+}
+
+/* FADING ANIMATION */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;  
 }
 /* SLIDESHOW SETTINGS */
 
@@ -160,3 +171,17 @@ header p.p__header {
   text-align: center;
   font-size: 1.2em;
 }
+
+/* KEYFRAMES */
+
+/* FADING KEYFRAME */
+@keyframes fade {
+  from {
+    opacity: .4;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+/* FADING KEYFRAME */
