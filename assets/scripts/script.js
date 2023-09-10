@@ -1,5 +1,7 @@
 let slideIndex = 1;
+const plusSlide = 
 showSlides(slideIndex);
+
 
 function plusSlides(n) {
   showSlides(slideIndex += n);

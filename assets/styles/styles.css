@@ -54,9 +54,18 @@ body {
 
 .slideshow__container-img {
   display: none;
+  margin: 0 auto;
+}
+
+
+.slideshow__img {
+  max-width: 100rem;
+  max-height: 50rem;
 }
 
 .prev, .next {
+  outline: none;
+  border: none;
   cursor: pointer;
   position: absolute;
   top: 50%;
@@ -64,6 +73,7 @@ body {
   margin-top: -2.2rem;
   padding: 1.6rem;
   color: var(--main-black-color);  
+  background-color: transparent;
   font-size: 1.8rem;
   font-weight: bold;
   transition: var(--transition-time);
@@ -89,6 +99,10 @@ body {
   padding: .8rem 1.2rem;
   position: absolute;
   top: 0;
+}
+
+.dots {
+  margin: 0 auto;
 }
 
 .dot {

@@ -56,19 +56,20 @@
         </div>
 
         <!-- Next and previous buttons -->
-        <a class="prev" onclick="plusSlides(-1)" href="">&#10094;</a>
-        <a class="next" onclick="plusSlides(1)" href="">&#10095;</a>
-
+        <button type="button" id="minusSlide" class="prev" onclick="plusSlides(-1)" href="">&#10094;</button>
+        <button type="button" id="plusSlides" class="next" onclick="plusSlides(1)" href="">&#10095;</button>
+        
+        <div class="dots-container">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+          <span class="dot" onclick="currentSlide(4)"></span>
+          <span class="dot" onclick="currentSlide(5)"></span>
+          <span class="dot" onclick="currentSlide(6)"></span>
+        </div>
+        
       </div>
 
-      <div class="dots-container">
-        <span class="dot" onclick="currentSlide(1)"></span>
-        <span class="dot" onclick="currentSlide(2)"></span>
-        <span class="dot" onclick="currentSlide(3)"></span>
-        <span class="dot" onclick="currentSlide(4)"></span>
-        <span class="dot" onclick="currentSlide(5)"></span>
-        <span class="dot" onclick="currentSlide(6)"></span>
-      </div>
 
       <section class="description">
         <!-- <p>The powerful GSB 18V-50 cordless impact driver offers durability and flexibility on tough jobs when drilling, impact drilling, and screwdriving in wood, metal, and masonry. Its intelligent brushless motor communicates directly with the tool's electronics, ensuring working efficiency and a long lifetime. The impact driver's metal chuck and ergonomic design make the tool compact and robust for easy use on heavy-duty jobs. It is compatible with all Bosch Professional 18 V batteries (Flexible Power System) for convenience on even the toughest projects, from start to finish.</p> -->
