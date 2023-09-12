@@ -45,25 +45,31 @@ body {
   font-family: 'Fira Sans Condensed', sans-serif;
 }
 
+/* DEFAULT CLASSES */
+section.slideshow__section {
+  margin-top: 10rem;
+}
+/* DEFAULT CLASSES */
+
 /* SLIDESHOW SETTINGS */
 div.slideshow-container {
   width: 50%;
   height: 40rem;
   position: relative;
   margin: 0;
+  box-shadow: var(--text-shadow);
 }
 
 .slideshow__container-img {
   display: none;
   margin: 0 auto;
+  background-color: #fff;
   width: 100%;
   height: 100%;
 }
 
-
 img.slideshow__img {
   width: 100%;
-  height: auto;
   min-width: 40rem;
   min-height: 40rem;
   max-width: 100%;
@@ -111,15 +117,16 @@ img.slideshow__img {
   top: 0;
 }
 
-.dots {
+.dots-container {
   margin: 0 auto;
+  text-align: center;
 }
 
 span.dot {
   cursor: pointer;
   height: 1.5rem;
   width: 1.5rem;
-  margin: 0 .2rem;
+  margin: 1rem .2rem;
   background-color: rgb(113, 113, 113, 1);
   border-radius: 50%;
   display: inline-block;
@@ -127,8 +134,9 @@ span.dot {
   user-select: none;
 }
 
-.active span.dot:hover {
-  background: rgba(79, 79, 79, .8);
+span.dot.active,
+span.dot:hover {
+  background-color: rgba(79, 79, 79, .8);
 }
 
 /* FADING ANIMATION */
@@ -177,9 +185,12 @@ aside.aside {
 
 header.header {
   margin: 1rem auto;
+  padding: 2rem;
   width: 100%;
   color: rgba(6, 9, 120, 47);
+  background-color: rgb(245, 237, 237);
   font-style: italic;
+  box-shadow: var(--text-shadow);
 }
 
 header h1.main-heading {
