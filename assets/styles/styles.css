@@ -47,18 +47,19 @@ body {
 }
 
 /* DEFAULT CLASSES */
-  section {
-    box-shadow: var(--text-shadow);
-  }
+
 /* DEFAULT CLASSES */
 
 /* SLIDESHOW SETTINGS */
+.slideshow__section {
+  width: 50%;
+}
+
 div.slideshow-container {
   width: 100%; 
   height: 40rem;
   position: relative;
   margin: 0;
-  box-shadow: var(--text-shadow);
 }
 
 .slideshow__container-img {
@@ -152,6 +153,8 @@ span.dot:hover {
 
 section.grid-container {
   height: 100%;
+  width: 100vw;
+  overflow: hidden;
   display: grid;
   grid-template-columns: 15vw 85vw;
   grid-template-rows: repeat(3, auto);
@@ -164,7 +167,14 @@ section.grid-container {
 
 header.header {
   grid-area: header;
-  width: 85vw;
+  height: auto;
+  margin: 0 auto;
+  padding: 2rem;
+  width: 100%;
+  color: rgba(6, 9, 120, 47);
+  background-color: rgb(245, 237, 237);
+  font-style: italic;
+  box-shadow: var(--text-shadow);
 }
 
 .main-content {
@@ -179,6 +189,8 @@ header.header {
   flex-flow: row wrap;
   align-items: center;
   justify-content: space-between;
+  background-color: #fff;
+  box-shadow: var(--text-shadow);
 }
 
 .presentation {
@@ -198,16 +210,6 @@ aside.aside {
   z-index: 2;
   grid-area: sidebar;
   border-right: .5rem solid var(--main-black-color);
-}
-
-header.header {
-  margin: 1rem auto;
-  padding: 2rem;
-  width: 100%;
-  color: rgba(6, 9, 120, 47);
-  background-color: rgb(245, 237, 237);
-  font-style: italic;
-  box-shadow: var(--text-shadow);
 }
 
 header h1.main-heading {
