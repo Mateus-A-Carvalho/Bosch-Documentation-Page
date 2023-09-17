@@ -46,10 +46,6 @@ body {
   font-family: 'Fira Sans Condensed', sans-serif;
 }
 
-/* DEFAULT CLASSES */
-
-/* DEFAULT CLASSES */
-
 /* SLIDESHOW SETTINGS */
 .slideshow__section {
   width: 50%;
@@ -70,12 +66,11 @@ div.slideshow-container {
   height: 100%;
   max-width: 40rem;
   max-height: 40rem;
-}
+  }
 
 img.slideshow__img {
-  width: 100%;
-  min-width: 40rem;
-  min-height: 40rem;
+  min-width: 100%;
+  min-height: 100%;
   max-width: 100%;
   max-height: 100%;
   object-fit: contain;
@@ -152,16 +147,14 @@ span.dot:hover {
 /* SLIDESHOW SETTINGS */
 
 section.grid-container {
-  height: 100%;
-  width: 100vw;
-  overflow: hidden;
   display: grid;
-  grid-template-columns: 15vw 85vw;
-  grid-template-rows: repeat(3, auto);
+  height: 100vh;
+  width: 100vw;
+  grid-template-columns: repeat( auto-fit, 1fr);
+  grid-template-rows: repeat( auto-fit, 1fr );
   grid-template-areas: 
     "header header"  
     "sidebar main"  
-    "sidebar footer"  
   ;
 }
 
@@ -185,6 +178,7 @@ header.header {
   height: 100%;
   width: 100%;
   grid-column: 1/-1;
+  grid-area: main;
   display: flex;
   flex-flow: row wrap;
   align-items: center;
@@ -205,7 +199,7 @@ aside.aside {
   left: 0;
   top: 0;
   background: var(--aside-bg);
-  width: 15vw;
+  width: auto;
   height: 100vh;
   z-index: 2;
   grid-area: sidebar;
